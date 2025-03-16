@@ -1,49 +1,101 @@
+import org.w3c.dom.ls.LSOutput;
+
 public class Main {
     public static void main(String[] args) {
-        var dog = 8.0; //8
-        var cat = 3.6; //3.6
-        var paper = 763789; //763789
-        System.out.println(); //Задача 1
+        int i = 32131;
+        byte b = 100;
+        short s = 32000;
+        long l = 9232323232L;
+        float f = 3.6f;
+        double d = 763789.123123;
+        System.out.println();
         System.out.println("Задача 1:");
-        System.out.println(dog);
-        System.out.println(cat);
-        System.out.println(paper);
-        System.out.println(); //Задача 2
+        System.out.println("Значение переменной i с типом int равно " + i);
+        System.out.println("Значение переменной b с типом byte равно " + b);
+        System.out.println("Значение переменной s с типом short равно " + s);
+        System.out.println("Значение переменной l с типом long равно " + l);
+        System.out.println("Значение переменной f с типом float равно " + f);
+        System.out.println("Значение переменной d с типом double равно " + d);
+        System.out.println();
         System.out.println("Задача 2:");
-        System.out.println(dog + 4); //12
-        System.out.println(cat + 4); //7.6
-        System.out.println(paper + 4); //763793
-        System.out.println(); //Задача 3
+        float flo = 27.12f;
+        long lon = 987678965549L;
+        float floTwo = 2.786f;
+        short shor = 569;
+        short shortTwo = -159;
+        short shortThree = 27897;
+        byte byt = 97;
+        System.out.println();
         System.out.println("Задача 3:");
-        System.out.println(dog - 3.5); //4.5
-        System.out.println(cat - 1.6); //2.0
-        System.out.println(paper - 7639); //756150
-        var friend = 19; // 19
-        System.out.println(); //Задача 4
+        var lyudPav = 23;
+        var annSerg = 27;
+        var ekatAnd = 30;
+        var allSheets = 480;
+        var allStudents = lyudPav + annSerg + ekatAnd;
+        var allSheetsPerStudents = allSheets / allStudents;
+        System.out.println("На каждого ученика рассчитано " + allSheetsPerStudents + " листов бумаги");
+        System.out.println();
         System.out.println("Задача 4:");
-        System.out.println(friend); //19
-        System.out.println(friend + 2); //21
-        System.out.println((friend + 2) / 7); //3
-        var frog = 3.5; //3.5
-        System.out.println(); //Задача 5
+        var performance = 16;
+        var perfPerTwoMinutes = 2;
+        var perfPerOneMinutes = performance / perfPerTwoMinutes; //производительность за 1 минуту
+        var perfPerTwentyMinutes = perfPerOneMinutes * 20;
+        var perfPerOneDay = perfPerOneMinutes * 1440;
+        var perfPerThreeDay = perfPerOneMinutes * 1440 * 3;
+        var perfPerOneMonth = perfPerOneMinutes * 1440 * 31;
+        System.out.println("За 20 минут машина произвела " + perfPerTwentyMinutes + " штук бутылок");
+        System.out.println("За 1 день машина произвела " + perfPerOneDay + " штук бутылок");
+        System.out.println("За 3 дня машина произвела " + perfPerThreeDay + " штук бутылок");
+        System.out.println("За 1 месяц машина произвела " + perfPerOneMonth + " штук бутылок");
+        System.out.println();
         System.out.println("Задача 5:");
-        System.out.println(frog * 10); //35.0
-        System.out.println((frog * 10) / 3.5); //10.0
-        System.out.println((frog * 10) / 3.5 + 4); //14.0
-        var boxerWeight1 = 78.2; //78.2
-        var boxerWeight2 = 82.7; //82.7
-        System.out.println(); //Задача 6
+        var allForOverhaul = 120;
+        var colorWhitePerOneClass = 2;
+        var colorBrownPerOneClass = 4;
+        var allClassSchool = allForOverhaul / (colorWhitePerOneClass + colorBrownPerOneClass);
+        var oneClassWhiteColor = allClassSchool * colorWhitePerOneClass;
+        var oneClassBrownColor = allClassSchool * colorBrownPerOneClass;
+        System.out.println("В школе, где " + allClassSchool + " классов, нужно " + oneClassWhiteColor + " банок белой краски и " + oneClassBrownColor + " банок коричневой краски");
+        System.out.println();
         System.out.println("Задача 6:");
-        System.out.println("Общая масса: " + (boxerWeight1 + boxerWeight2) + " кг"); //160.9
-        System.out.println("Разница масс: " + (boxerWeight2 - boxerWeight1) + " кг"); //4.5
-        System.out.println(); //Задача 7
+        var banana = 5;
+        var bananaWeight = 5 * 80;
+        var milk = 200;
+        var milkWeigh = (200 / 2) * 105;
+        var icecream = 2;
+        var icecreamWeight = 2 * 100;
+        var egg = 4;
+        var eggWeight = 4 * 70;
+        var breakfastWeightGramm = bananaWeight + milkWeigh + icecreamWeight + eggWeight;
+        var breakfastWeightKilo = breakfastWeightGramm / 1000;
+        System.out.println(breakfastWeightGramm + " г");
+        System.out.println(breakfastWeightKilo + " кг");
+        System.out.println();
         System.out.println("Задача 7:");
-        System.out.println("Остаток от деления масс: " + (boxerWeight2 % boxerWeight1) + " кг"); //4.5
-        var jobTime = 640; //640
-        var workerTime = 8; //8
-        System.out.println(); //Задача 8
+        var grossWeight = 7000;
+        var grossPerDayOneVar = 250;
+        var grossPerDayTwoVar = 500;
+        var grossWeightOneVar = grossWeight / grossPerDayOneVar;
+        var grossWeightTwoVar = grossWeight / grossPerDayTwoVar;
+        var grossWeightVarAverage = (grossWeightTwoVar + grossWeightOneVar) / 2;
+        System.out.println(grossWeightOneVar);
+        System.out.println(grossWeightTwoVar);
+        System.out.println(grossWeightVarAverage);
+        System.out.println();
         System.out.println("Задача 8:");
-        System.out.println("Всего сотрудников в компании - " + (jobTime / workerTime) + " человек"); //80
-        System.out.println("Если в компании работает - " + (jobTime / workerTime + 94) + " человека," + " то всего " + (jobTime / (jobTime / workerTime + 94)) + " часа работы может быть поделено между сотрудниками"); //174 и 3
+        var masha = 67760;
+        var denis = 83690;
+        var kristina = 76230;
+        var grossMasha = (masha / 100) * 10 + masha;
+        var grossDenis = (denis / 100) * 10 + denis;
+        var grossKristina = (kristina / 100) * 10 + kristina;
+        var diffMasha = (grossMasha - masha) * 12;
+        var diffDenis = (grossDenis - denis) * 12;
+        var diffKristina = (grossKristina - kristina) * 12;
+        System.out.println("Маша теперь получает " + grossMasha + " рублей. Годовой доход вырос на " + diffMasha + " рублей");
+        System.out.println("Денис теперь получает " + grossDenis + " рублей. Годовой доход вырос на " + diffDenis + " рублей");
+        System.out.println("Маша теперь получает " + grossKristina + " рублей. Годовой доход вырос на " + diffKristina + " рублей");
     }
+
+
 }
