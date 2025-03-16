@@ -59,13 +59,13 @@ public class Main {
         System.out.println();
         System.out.println("Задача 6:");
         var banana = 5;
-        var bananaWeight = 5 * 80;
+        var bananaWeight = banana * 80;
         var milk = 200;
-        var milkWeigh = (200 / 2) * 105;
+        var milkWeigh = (milk / 2) * 105;
         var icecream = 2;
-        var icecreamWeight = 2 * 100;
+        var icecreamWeight = icecream * 100;
         var egg = 4;
-        var eggWeight = 4 * 70;
+        var eggWeight = egg * 70;
         var breakfastWeightGramm = bananaWeight + milkWeigh + icecreamWeight + eggWeight;
         var breakfastWeightKilo = breakfastWeightGramm / 1000;
         System.out.println(breakfastWeightGramm + " г");
@@ -96,6 +96,4 @@ public class Main {
         System.out.println("Денис теперь получает " + grossDenis + " рублей. Годовой доход вырос на " + diffDenis + " рублей");
         System.out.println("Маша теперь получает " + grossKristina + " рублей. Годовой доход вырос на " + diffKristina + " рублей");
     }
-
-
 }
